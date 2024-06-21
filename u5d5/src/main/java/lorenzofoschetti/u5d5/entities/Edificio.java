@@ -1,0 +1,42 @@
+package lorenzofoschetti.u5d5.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.UUID;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+
+public class Edificio {
+    @Id
+    @GeneratedValue
+    @Setter(AccessLevel.NONE)
+    private UUID id;
+    private String name;
+    private String address;
+    private String city;
+
+    public Edificio(String name, String address, String city) {
+        this.name = name;
+        this.address = address;
+        this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Edificio{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
+}
