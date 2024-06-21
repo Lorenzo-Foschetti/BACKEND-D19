@@ -1,15 +1,14 @@
 package lorenzofoschetti.u5d5.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lorenzofoschetti.u5d5.enums.Tipo;
 
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -24,7 +23,11 @@ public class Postazione {
     private String description;
     private Tipo tipo;
     private int numeroMaxOccupanti;
+    @ManyToOne
+    @JoinColumn(name = "edificio_id")
     private Edificio edificio;
+    @OneToMany(mappedBy = "postazione")
+    private List<Prenotazione> prenotazioni;
 
     public Postazione(String description, Tipo tipo, int numeroMaxOccupanti, Edificio edificio) {
         this.description = description;
