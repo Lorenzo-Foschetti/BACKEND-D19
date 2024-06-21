@@ -28,11 +28,11 @@ public class Edificio {
     @OneToMany(mappedBy = "edificio")
     private List<Postazione> postazioni;
 
-    public Edificio(String name, String address, String city, List<Postazione> postazioni) {
+    public Edificio(String name, String address, String city) {
         this.name = name;
         this.address = address;
         this.city = city;
-        this.postazioni = postazioni;
+
     }
 
     @Override
