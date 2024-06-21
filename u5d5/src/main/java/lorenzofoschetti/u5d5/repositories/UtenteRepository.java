@@ -6,4 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 
 public interface UtenteRepository extends JpaRepository<Utente, UUID> {
+
+
+    //anche questa query creata per essere implementata nel metodo save dell'utente
+    boolean existsByEmailAndUsername(String email, String username);
 }
