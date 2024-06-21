@@ -1,7 +1,6 @@
 package lorenzofoschetti.u5d5;
 
 
-import lorenzofoschetti.u5d5.entities.Edificio;
 import lorenzofoschetti.u5d5.services.EdificioService;
 import lorenzofoschetti.u5d5.services.PostazioneService;
 import lorenzofoschetti.u5d5.services.PrenotazioneService;
@@ -29,16 +28,22 @@ public class MyRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        Edificio primoEdificio = context.getBean("primoEdificio", Edificio.class);
-//        edificioService.saveEdificio(primoEdificio);
-
-        Edificio primoEdificio = new Edificio("Primo Edificio", "Via Roma 80", "Roma");
-        edificioService.saveEdificio(primoEdificio);
-
-//        Postazione primaPostazione = new Postazione();
+////        Edificio primoEdificio = context.getBean("primoEdificio", Edificio.class);
+////        edificioService.saveEdificio(primoEdificio);
 //
-//        Prenotazione primaPrenotazione = new Prenotazione():
+//        //  Edificio primoEdificio = new Edificio("Primo Edificio", "Via Roma 80", "Roma");
+////        edificioService.saveEdificio(primoEdificio);
+//        Edificio secondoEdificio = new Edificio("Secondo Edificio", "Via dei pini 90", "Palermo");
 //
-//        Utente primoUtente = new Utente()
+//        //  Postazione primaPostazione = new Postazione("bellissima", Tipo.PRIVATO, 20, primoEdificio);
+////       postazioneService.savePostazione(primaPostazione);
+//
+//        Postazione secondaPostazione = new Postazione("carina", Tipo.OPENSPACE, 30, secondoEdificio);
+////
+//////
+//        Utente primoUtente = new Utente("cicciobello", "Andrea Rossi", "AndreaRossi@gmail.com");
+////        // utenteService.saveUtente(primoUtente);
+
+
     }
 }

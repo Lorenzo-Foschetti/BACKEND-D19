@@ -33,11 +33,11 @@ public class Utente {
     @OneToMany(mappedBy = "utente")
     private List<Prenotazione> prenotazioni;
 
-    public Utente(String userName, String nameAndSurname, String email, List<Prenotazione> prenotazioni) {
+    public Utente(String userName, String nameAndSurname, String email) {
         this.userName = userName;
         this.nameAndSurname = nameAndSurname;
         this.email = email;
-        this.prenotazioni = prenotazioni;
+
     }
 
     @Override
